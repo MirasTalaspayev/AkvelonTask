@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkvelonTask", "AkvelonTask\AkvelonTask.csproj", "{53A5134D-4C9E-4E32-A839-A2D423A33CAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAkevelonTask", "TestAkevelonTask\TestAkevelonTask.csproj", "{A90754F5-E4AC-4F6F-AAF3-8F62A0416296}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53A5134D-4C9E-4E32-A839-A2D423A33CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53A5134D-4C9E-4E32-A839-A2D423A33CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53A5134D-4C9E-4E32-A839-A2D423A33CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53A5134D-4C9E-4E32-A839-A2D423A33CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A90754F5-E4AC-4F6F-AAF3-8F62A0416296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A90754F5-E4AC-4F6F-AAF3-8F62A0416296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A90754F5-E4AC-4F6F-AAF3-8F62A0416296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A90754F5-E4AC-4F6F-AAF3-8F62A0416296}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6A76713-A571-4516-841D-A8F52CFC893E}
+	EndGlobalSection
+EndGlobal
