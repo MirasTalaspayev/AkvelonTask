@@ -1,11 +1,15 @@
 using AkvelonTask.Data;
+using AkvelonTask.Models;
 using AkvelonTask.Services;
 using Microsoft.EntityFrameworkCore;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TestAkevelonTask
 {
-    public class Tests
+    public class ExceptionTests
     {
         private static DbContextOptions<AppDbContext> options = new DbContextOptionsBuilder<AppDbContext>()
             .UseInMemoryDatabase("TestDatabase")
@@ -27,16 +31,40 @@ namespace TestAkevelonTask
         {
             context.Database.EnsureDeleted();
         }
-
         [Test]
-        public void Test1()
+        public void InvalidProjectDates()
         {
-            Assert.Pass();
+            Assert.Throws<ArgumentException>(
+                () =>
+                new Project()
+                {
+                    Id = 1,
+                    IsDeleted = false,
+                    Name = "Twitter",
+                    StartDate = DateTime.Parse("2022-01-01"),
+                    EndDate = DateTime.Parse("2021-12-31"),
+                    Priority = 1,
+                    Status = 0,
+                    Tasks = new List<TaskInfo>()
+                }
+            );
+
         }
         [Test]
-        public void Test2()
+        public void GetNotExistingProject()
         {
-            
+            Assert.ThrowsAsync<Exception>(async () =>
+            {
+                var p = await projectService.Get(1);
+            });
+        }
+        [Test]
+        public void GetNotExistingTask()
+        {
+            Assert.ThrowsAsync<Exception>(async () =>
+            {
+                var p = await taskService.Get(1);
+            });
         }
     }
 }
